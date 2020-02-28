@@ -25,20 +25,20 @@ class Triangle
     (@triangle[2] + @triangle[0] <>@triangle[1])
   end
   
-  def kind
-  if (negative? == true || valid? == false)
-      raise TriangleError
+  # def kind
+  #   if (negative? == true || valid? == false)
+  #     raise TriangleError
       
-    elsif @triangle.uniq.length == 1 
-      :equilateral
+  #   elsif @triangle.uniq.length == 1 
+  #     :equilateral
       
-    elsif @triangle.uniq.length == 2 
-      :isosceles 
+  #   elsif @triangle.uniq.length == 2 
+  #     :isosceles 
       
-    else 
-      :scalene
-    end
-  end
+  #   else 
+  #     :scalene
+  #   end
+  # end
   
   class TriangleError < StandardError
   end  
