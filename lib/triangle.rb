@@ -26,10 +26,7 @@ class Triangle
   end
   
   def kind
-    if @triangle.any?(0)
-      raise TriangleError
-      
-    elsif @triangle.any? {|side| side < 0}
+  if (negative? == true || valid? == false)
       raise TriangleError
       
     elsif @triangle.uniq.length == 1 
