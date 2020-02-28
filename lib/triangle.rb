@@ -11,6 +11,14 @@ class Triangle
     @triangle << side3
   end
   
+    def negative?
+    @triangle.each do |length|
+      if(length <= 0)
+        return true
+      end
+    end
+  end
+  
   def kind
     if @triangle.any?(0)
       raise TriangleError
