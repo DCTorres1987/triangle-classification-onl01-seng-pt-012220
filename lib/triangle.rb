@@ -19,11 +19,11 @@ class Triangle
     end
   end
   
-  def valid?
-    (@triangle[0] + @triangle[1] > @triangle[2]) &&
-    (@triangle[1] + @triangle[2] > @triangle[0]) &&
-    (@triangle[2] + @triangle[0] <>@triangle[1])
-  end
+  # def valid?
+  #   (@triangle[0] + @triangle[1] > @triangle[2]) &&
+  #   (@triangle[1] + @triangle[2] > @triangle[0]) &&
+  #   (@triangle[2] + @triangle[0] <>@triangle[1])
+  # end
   
   # def kind
   #   if (negative? == true || valid? == false)
