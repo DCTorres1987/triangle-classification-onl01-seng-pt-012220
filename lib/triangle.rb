@@ -20,20 +20,16 @@ class Triangle
   end
   
   def valid?
-    (@triangle[0] + @triangle[1] > @triangle[2] &&
-          @triangle[1] + @triangle[2] < @triangle[0] ||
-          @triangle[2] + @triangle[0] < @triangle[1]
+    (@triangle[0] + @triangle[1] > @triangle[2]) &&
+    (@triangle[1] + @triangle[2] > @triangle[0]) &&
+    (@triangle[2] + @triangle[0] <>@triangle[1])
+  end
   
   def kind
     if @triangle.any?(0)
       raise TriangleError
       
     elsif @triangle.any? {|side| side < 0}
-      raise TriangleError
-      
-    elsif @triangle[0] + @triangle[1] < @triangle[2] ||
-          @triangle[1] + @triangle[2] < @triangle[0] ||
-          @triangle[2] + @triangle[0] < @triangle[1]
       raise TriangleError
       
     elsif @triangle.uniq.length == 1 
