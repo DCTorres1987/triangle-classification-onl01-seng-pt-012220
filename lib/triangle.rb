@@ -22,7 +22,7 @@ class Triangle
   def valid?
     (@triangle[0] + @triangle[1] > @triangle[2]) &&
     (@triangle[1] + @triangle[2] > @triangle[0]) &&
-    (@triangle[2] + @triangle[0] <>@triangle[1])
+    (@triangle[2] + @triangle[0] > @triangle[1])
   end
   
   # def kind
