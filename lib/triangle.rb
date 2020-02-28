@@ -18,7 +18,9 @@ class Triangle
     elsif @triangle.any? {|side| side < 0}
       raise TriangleError
       
-    elsif ((@side1 + @side2) < @side3) || ((@side2 + @side3) < @side1) || ((@side1 + @side3) < @side2)
+    elsif @triangle[0] + @triangle[1] < @triangle[2] ||
+          @triangle[1] + @triangle[2] < @triangle[0] ||
+          @triangle[2] + @triangle[0] < @triangle[1]
       raise TriangleError
       
     elsif @triangle.uniq.length == 1 
